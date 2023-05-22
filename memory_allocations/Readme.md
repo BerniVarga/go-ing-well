@@ -12,15 +12,15 @@ The `heap memory` is a shared memory space, and it's not a sequential space by d
 The garbage collector occassionally needs to stop the program and analyse the memory data, and do the cleaning - which causes latency to the whole program, not only to the parts that are creating garbage. This is why we say that creating variables on the heap is expensive. 
 In fact, only variables that live on the heap are considered allocations in Go.
 
-The examples might make more sense if you look at the in this order:
-[1] variables that stay on stack
-[2] pointers that stay on stack
-[3] pointers that "escape" to the heap
-[4] strings 
+The examples might make more sense if you look at the in this order:   
+[1] variables that stay on stack   
+[2] pointers that stay on stack   
+[3] pointers that "escape" to the heap   
+[4] strings    
 
 
 Credit:  
-The examples in this repository were highly influenced by all I learnt from Ardanlabs. 
+The examples in this repository were highly influenced by all I learnt from [Ardanlabs](https://github.com/ardanlabs/gotraining/). 
 
 
 
