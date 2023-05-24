@@ -21,10 +21,10 @@ BenchmarkSprintfEmpty-8         135700570               26.40 ns/op            5
 BenchmarkSprintfFormatted-8     60274164                58.74 ns/op           24 B/op          2 allocs/op
 ```
   
--> 2nd coloumn: the number of cycles run in 3 sec  
--> 3rd coloumn: how much time was needed for one operation  
--> 4th coloumn: the number of byte/operation  
--> 5th coloumn: the number of allocations/op  
+-> 2nd column: the number of cycles run in 3 sec  
+-> 3rd column: how much time was needed for one operation  
+-> 4th column: the number of byte/operation  
+-> 5th column: the number of allocations/op  
 
 
 For individual test:

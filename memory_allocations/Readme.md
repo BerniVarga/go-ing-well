@@ -3,7 +3,9 @@
 A program's memory consist of the stack and heap memory. 
 Both are taken out of the RAM, but while the stack is cheap, heap can be expensive to handle. Let's see some whys.
 
-The `stack memory` is a sequential memory space, used in small blocks (2k frame initial size for each go routine). It is not a shared memory, every go routine uses it's own stack, and while we create variables on the stack, we basically just move up and down the stack.
+The `stack memory` is a sequential memory space (2k initial size for each goroutine). It is not a shared memory, every go routine uses it's own stack. 
+Every time a function is called, a block of of stack space is taken to help the goroutine execute the instructions associated with that function. Each individual block of memory is called a frame. The size of these frames are defined by the compiler.
+
 Stacks are called self-cleaning, since each time a function exists, the used stack frame is considered invalid, and every time a new function gets called, the stack space is reused. Go's way of using zero is a huge help in making this very easy to do so.
 Whenever a new stack frame is taken, that gets taken out of the "heap" space. There is such a thing as maximum heap size, however, it is very large, so most machines shouldn't reach it. 
 
